@@ -9,8 +9,8 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 github:
-  user:loperntu
-  repo:corpusProcessingMethods
+  user: loperntu
+  repo: corpusProcessingMethods
 ---
 
 ## Read-And-Delete

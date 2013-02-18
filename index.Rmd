@@ -1,0 +1,56 @@
+---
+title       : Corpus Processing Methods
+subtitle    : An R-chitecture
+author      : Shu-Kai Hsieh 謝舒凱
+job         : Assitant Prof. at GIL, NTU
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+github:
+  user:lopentu
+  repo:corpusProceesingMethods
+---
+
+## Read-And-Delete
+
+1. Edit YAML front matter
+2. Write using R Markdown
+3. Use an empty line followed by three dashes to separate slides!
+
+--- .class #id 
+
+## Slide 1
+
+CPM, 到底有什麼特別?
+
+> 1. Linguistics: a data-intensive discipline? 
+> 2. Corpus data science
+> 3. Pre-processing
+> 4. (Corpus-based) Exploratory Data Analysis 
+> 5. Hypothesis and Testing
+> 6. Statistical Modeling
+> 7. Demo: Shiny-LexicoR 
+
+---
+
+## Motion Chart
+
+```{r echo = F, results='asis', message = F}
+require(googleVis)
+M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
+print(M1,tag = 'chart')
+```
+
+---
+
+## ggplot2
+
+```{r echo = F, results='asis', message = F}
+require(ggplot2)
+head(diamonds)
+ggplot(diamonds, aes(clarity, fill=cut)) + geom_bar()
+```
+
+

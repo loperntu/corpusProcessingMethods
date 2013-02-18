@@ -10,7 +10,7 @@ widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 github:
   user:loperntu
-  repo:corpusProceesingMethods
+  repo:corpusProcessingMethods
 ---
 
 ## Read-And-Delete

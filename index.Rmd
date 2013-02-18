@@ -9,7 +9,7 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 github:
-  user:lopertu
+  user:loperntu
   repo:corpusProceesingMethods
 ---
 

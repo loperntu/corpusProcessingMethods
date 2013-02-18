@@ -9,8 +9,8 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 github:
-  user:loperntu
-  repo:corpusProcessingMethods
+  user: loperntu
+  repo: corpusProcessingMethods
 ---
 
 ## Read-And-Delete
@@ -38,7 +38,7 @@ CPM, 到底有什麼特別?
 ## Motion Chart
 
 <!-- MotionChart generated in R 2.15.1 by googleVis 0.2.17 package -->
-<!-- Mon Feb 18 17:25:11 2013 -->
+<!-- Mon Feb 18 17:29:35 2013 -->
 
 
 <!-- jsHeader -->
@@ -47,7 +47,7 @@ CPM, 到底有什麼特別?
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID101b10627c64 ()
+function gvisDataMotionChartIDea77ce696fb ()
 {
   var data = new google.visualization.DataTable();
   var datajson =
@@ -146,14 +146,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID101b10627c64() {
-  var data = gvisDataMotionChartID101b10627c64();
+function drawChartMotionChartIDea77ce696fb() {
+  var data = gvisDataMotionChartIDea77ce696fb();
   var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
      var chart = new google.visualization.MotionChart(
-       document.getElementById('MotionChartID101b10627c64')
+       document.getElementById('MotionChartIDea77ce696fb')
      );
      chart.draw(data,options);
     
@@ -162,14 +162,14 @@ options["height"] =    500;
   
  
 // jsDisplayChart 
-function displayChartMotionChartID101b10627c64()
+function displayChartMotionChartIDea77ce696fb()
 {
   google.load("visualization", "1", { packages:["motionchart"] }); 
-  google.setOnLoadCallback(drawChartMotionChartID101b10627c64);
+  google.setOnLoadCallback(drawChartMotionChartIDea77ce696fb);
 }
  
 // jsChart 
-displayChartMotionChartID101b10627c64()
+displayChartMotionChartIDea77ce696fb()
  
 <!-- jsFooter -->  
 //-->
@@ -177,7 +177,7 @@ displayChartMotionChartID101b10627c64()
  
 <!-- divChart -->
   
-<div id="MotionChartID101b10627c64"
+<div id="MotionChartIDea77ce696fb"
   style="width: 600px; height: 500px;">
 </div>
 
@@ -197,4 +197,4 @@ displayChartMotionChartID101b10627c64()
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 
-
+---

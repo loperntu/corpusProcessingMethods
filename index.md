@@ -9,8 +9,8 @@ hitheme     : tomorrow      #
 widgets     : []            # {mathjax, quiz, bootstrap}
 mode        : selfcontained # {standalone, draft}
 github:
-  user:lopentu
-  repo:corpusProceesingMethods
+  user:loperntu
+  repo:corpusProcessingMethods
 ---
 
 ## Read-And-Delete
@@ -38,7 +38,7 @@ CPM, 到底有什麼特別?
 ## Motion Chart
 
 <!-- MotionChart generated in R 2.15.1 by googleVis 0.2.17 package -->
-<!-- Mon Feb 18 17:19:22 2013 -->
+<!-- Mon Feb 18 17:25:11 2013 -->
 
 
 <!-- jsHeader -->
@@ -47,7 +47,7 @@ CPM, 到底有什麼特別?
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartIDfdc57e441a9 ()
+function gvisDataMotionChartID101b10627c64 ()
 {
   var data = new google.visualization.DataTable();
   var datajson =
@@ -146,14 +146,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartIDfdc57e441a9() {
-  var data = gvisDataMotionChartIDfdc57e441a9();
+function drawChartMotionChartID101b10627c64() {
+  var data = gvisDataMotionChartID101b10627c64();
   var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
      var chart = new google.visualization.MotionChart(
-       document.getElementById('MotionChartIDfdc57e441a9')
+       document.getElementById('MotionChartID101b10627c64')
      );
      chart.draw(data,options);
     
@@ -162,14 +162,14 @@ options["height"] =    500;
   
  
 // jsDisplayChart 
-function displayChartMotionChartIDfdc57e441a9()
+function displayChartMotionChartID101b10627c64()
 {
   google.load("visualization", "1", { packages:["motionchart"] }); 
-  google.setOnLoadCallback(drawChartMotionChartIDfdc57e441a9);
+  google.setOnLoadCallback(drawChartMotionChartID101b10627c64);
 }
  
 // jsChart 
-displayChartMotionChartIDfdc57e441a9()
+displayChartMotionChartID101b10627c64()
  
 <!-- jsFooter -->  
 //-->
@@ -177,7 +177,7 @@ displayChartMotionChartIDfdc57e441a9()
  
 <!-- divChart -->
   
-<div id="MotionChartIDfdc57e441a9"
+<div id="MotionChartID101b10627c64"
   style="width: 600px; height: 500px;">
 </div>
 

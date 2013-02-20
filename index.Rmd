@@ -15,40 +15,146 @@ github:
 
 ## Introduction: Data, Data, Data!
 
-> 1. Decision is YOURS: English teacher or (Linguistic) Data Scientist
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+> 1. "Data are values of qualitative or quantitative variables, belonging to a set of items (i.e., populations)." (wiki)
+> 2. Linguistics: a data-intensive discipline? 
+> 3. The Decision is YOURS: English teacher or (Linguistic) Data Scientist
 
 --- 
 
-## CPM, 到底有什麼特別?
+## What's so special about CPM ? OR, What do you mean by *processing* data? 
 
-> 1. Linguistics: a data-intensive discipline? 
-> 2. Corpus data science
-> 3. Pre-processing
-> 4. (Corpus-based) Exploratory Data Analysis 
-> 5. Hypothesis and Testing
-> 6. Statistical Modeling
-> 7. Demo: Shiny-LexicoR 
+In general, Corpus data science involves a chain of works
+
+> 1. Pre-processing (cleaning, tokenizing, segmentation, etc)
+> 2. Data annotation (Semi-automatic) Labeling (POS tagging) and Management
+> 3. Exploratory Data Analysis (with workable knowledge of Statistics)
+> 4. Hypothesis testing
+> 5. Prediction, Statistical Modeling, etc
+> 6. Web application (Demo: Shiny-LexicoR) 
+
+
+
+**Empirical method and statistics** are two sides of the same coin: it is pointless to study one without the other. (You simply cannot design an experiment and interpret the results without understanding what the data are telling you and what
+they do not and–even more importantly – cannot tell you.)
 
 ---
 
-## Motion Chart
+## 
 
-```{r echo = F, results='asis', message = F}
-require(googleVis)
-M1 <- gvisMotionChart(Fruits, idvar = 'Fruit', timevar = 'Year')
-print(M1,tag = 'chart')
+
+
+
+
+
+---
+## R Self Warm-up Quiz ( from R. Peng)
+
+- Download the dataset on http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv and load it into R with the read.csv function. Assign the output of read.csv to an object named dataset. 
+
+> Possible solutions 
+
+
+```{r echo = T, results='asis', message = F}
+## One way (easiest and fastest)
+dataset <- read.csv("http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv")
+
+## You may want to store a local copy for later
+download.file("http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv","selfquiz-data.csv")
+dataset <- read.csv("selfquiz-data.csv")
 ```
 
 ---
 
-## ggplot2
+## R Self Warm-up Quiz (level 1)
 
-```{r echo = F, results='asis', message = F}
-require(ggplot2)
-head(diamonds)
-ggplot(diamonds, aes(clarity, fill=cut)) + geom_bar()
+- What are the column names of the data frame?
+- What are the row names of the data frame?
+- Extract the first 6 rows of the data frame and print them to the console.
+- How many observations (i.e. rows) are in this data frame?
+
+> Possible solutions 
+
+```{r echo = T, results = 'hide', message = F}
+## 
+names(dataset)  ## colnames(dataset) also works
+## 
+rownames(dataset)
+## 
+head(dataset, 6)  ## print(dataset[1:6, ]) 
+##
+nrow(dataset)
+
 ```
 
 ---
+
+## R Self Warm-up Quiz (level 2)
+
+- Extract the last 6 rows of the data frame and print them to the console
+- How many missing values are in the "Ozone" column of this data frame?
+- What is the mean of the "Ozone"" column in this dataset? Exclude missing
+values (coded as NA) from this calculation.
+- Extract the subset of rows of the data frame where Ozone values are above
+31 and Temp values are above 90.
+
+
+> Possible solutions 
+
+```{r echo = T, results = 'hide', message = F}
+##
+tail(dataset)
+## 37
+miss <- is.na(dataset[, "Ozone"]) ## A vector of TRUE/FALSE
+sum(miss)
+## 42.13
+mean(dataset[, "Ozone"], na.rm = TRUE)
+##
+subset(dataset, Ozone > 31 & Temp > 90)
+```
+
+---
+
+## R Self Warm-up Quiz (level 3)
+
+- Use a for loop to create a vector of length 6 containing the mean of each
+column in the data frame (excluding all missing values).
+- Use the apply function to calculate the standard deviation of each column
+in the data frame (excluding all missing values).
+
+
+```{r echo = T, results = 'hide', message = F}
+##
+m <- numeric(6)
+for (i in 1:6) {
+m[i] <- mean(dataset[, i], na.rm = TRUE)
+}
+##
+s <- apply(dataset, 2, sd, na.rm = TRUE)
+print(s)
+print(m)
+```
+
+---
+
+## R Self Warm-up Quiz (level 4)
+
+- Calculate the mean of "Ozone" for each Month in the data frame and
+create a vector containing the monthly means (exclude all missing values).
+
+
+```{r echo = T, message = F}
+tapply(dataset$Ozone, dataset$Month, mean, na.rm = TRUE)
+```
+
+> - Draw a random sample of 5 rows from the data frame.
+
+```{r echo = T, results='hide', message = F}
+set.seed(1) ## Just so the answer is repeatable
+dataset[sample(nrow(dataset), 5), ]
+
+```
+
+---
+
+
+

@@ -15,184 +15,180 @@ github:
 
 ## Introduction: Data, Data, Data!
 
-> 1. Decision is YOURS: English teacher or (Linguistic) Data Scientist
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+> 1. "Data are values of qualitative or quantitative variables, belonging to a set of items (i.e., populations)." (wiki)
+> 2. Linguistics: a data-intensive discipline? 
+> 3. The Decision is YOURS: English teacher or (Linguistic) Data Scientist
 
 --- 
 
-## CPM, 到底有什麼特別?
+## What's so special about CPM ? OR, What do you mean by *processing* data? 
 
-> 1. Linguistics: a data-intensive discipline? 
-> 2. Corpus data science
-> 3. Pre-processing
-> 4. (Corpus-based) Exploratory Data Analysis 
-> 5. Hypothesis and Testing
-> 6. Statistical Modeling
-> 7. Demo: Shiny-LexicoR 
+In general, Corpus data science involves a chain of works
+
+> 1. Pre-processing (cleaning, tokenizing, segmentation, etc)
+> 2. Data annotation (Semi-automatic) Labeling (POS tagging) and Management
+> 3. Exploratory Data Analysis (with workable knowledge of Statistics)
+> 4. Hypothesis testing
+> 5. Prediction, Statistical Modeling, etc
+> 6. Web application (Demo: Shiny-LexicoR) 
+
+
+
+**Empirical method and statistics** are two sides of the same coin: it is pointless to study one without the other. (You simply cannot design an experiment and interpret the results without understanding what the data are telling you and what
+they do not and–even more importantly – cannot tell you.)
 
 ---
 
-## Motion Chart
-
-<!-- MotionChart generated in R 2.15.1 by googleVis 0.2.17 package -->
-<!-- Wed Feb 20 10:51:47 2013 -->
+## 
 
 
-<!-- jsHeader -->
-<script type="text/javascript" src="http://www.google.com/jsapi">
-</script>
-<script type="text/javascript">
- 
-// jsData 
-function gvisDataMotionChartID162a218a555 ()
-{
-  var data = new google.visualization.DataTable();
-  var datajson =
-[
- [
- "Apples",
-       2008,
-"West",
-         98,
-         78,
-         20,
-"2008-12-31" 
-],
-[
- "Apples",
-       2009,
-"West",
-        111,
-         79,
-         32,
-"2009-12-31" 
-],
-[
- "Apples",
-       2010,
-"West",
-         89,
-         76,
-         13,
-"2010-12-31" 
-],
-[
- "Oranges",
-       2008,
-"East",
-         96,
-         81,
-         15,
-"2008-12-31" 
-],
-[
- "Bananas",
-       2008,
-"East",
-         85,
-         76,
-          9,
-"2008-12-31" 
-],
-[
- "Oranges",
-       2009,
-"East",
-         93,
-         80,
-         13,
-"2009-12-31" 
-],
-[
- "Bananas",
-       2009,
-"East",
-         94,
-         78,
-         16,
-"2009-12-31" 
-],
-[
- "Oranges",
-       2010,
-"East",
-         98,
-         91,
-          7,
-"2010-12-31" 
-],
-[
- "Bananas",
-       2010,
-"East",
-         81,
-         71,
-         10,
-"2010-12-31" 
-] 
-];
-data.addColumn('string','Fruit');
-data.addColumn('number','Year');
-data.addColumn('string','Location');
-data.addColumn('number','Sales');
-data.addColumn('number','Expenses');
-data.addColumn('number','Profit');
-data.addColumn('string','Date');
-data.addRows(datajson);
-return(data);
-}
- 
-// jsDrawChart
-function drawChartMotionChartID162a218a555() {
-  var data = gvisDataMotionChartID162a218a555();
-  var options = {};
-options["width"] =    600;
-options["height"] =    500;
 
-     var chart = new google.visualization.MotionChart(
-       document.getElementById('MotionChartID162a218a555')
-     );
-     chart.draw(data,options);
-    
 
-}
-  
- 
-// jsDisplayChart 
-function displayChartMotionChartID162a218a555()
-{
-  google.load("visualization", "1", { packages:["motionchart"] }); 
-  google.setOnLoadCallback(drawChartMotionChartID162a218a555);
-}
- 
-// jsChart 
-displayChartMotionChartID162a218a555()
- 
-<!-- jsFooter -->  
-//-->
-</script>
- 
-<!-- divChart -->
-  
-<div id="MotionChartID162a218a555"
-  style="width: 600px; height: 500px;">
-</div>
+
+
+---
+## R Self Warm-up Quiz ( from R. Peng)
+
+- Download the dataset on http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv and load it into R with the read.csv function. Assign the output of read.csv to an object named dataset. 
+
+> Possible solutions 
+
+
+
+
+```r
+## One way (easiest and fastest)
+dataset <- read.csv("http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv")
+
+## You may want to store a local copy for later
+download.file("http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv", 
+    "selfquiz-data.csv")
+dataset <- read.csv("selfquiz-data.csv")
+```
+
 
 
 
 ---
 
-## ggplot2
+## R Self Warm-up Quiz (level 1)
 
-  carat       cut color clarity depth table price    x    y    z
-1  0.23     Ideal     E     SI2  61.5    55   326 3.95 3.98 2.43
-2  0.21   Premium     E     SI1  59.8    61   326 3.89 3.84 2.31
-3  0.23      Good     E     VS1  56.9    65   327 4.05 4.07 2.31
-4  0.29   Premium     I     VS2  62.4    58   334 4.20 4.23 2.63
-5  0.31      Good     J     SI2  63.3    58   335 4.34 4.35 2.75
-6  0.24 Very Good     J    VVS2  62.8    57   336 3.94 3.96 2.48
-![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+- What are the column names of the data frame?
+- What are the row names of the data frame?
+- Extract the first 6 rows of the data frame and print them to the console.
+- How many observations (i.e. rows) are in this data frame?
+
+> Possible solutions 
+
+
+
+```r
+##
+names(dataset)  ## colnames(dataset) also works
+##
+rownames(dataset)
+##
+head(dataset, 6)  ## print(dataset[1:6, ])
+##
+nrow(dataset)
+```
+
+
 
 
 ---
+
+## R Self Warm-up Quiz (level 2)
+
+- Extract the last 6 rows of the data frame and print them to the console
+- How many missing values are in the "Ozone" column of this data frame?
+- What is the mean of the "Ozone"" column in this dataset? Exclude missing
+values (coded as NA) from this calculation.
+- Extract the subset of rows of the data frame where Ozone values are above
+31 and Temp values are above 90.
+
+
+> Possible solutions 
+
+
+
+```r
+##
+tail(dataset)
+## 37
+miss <- is.na(dataset[, "Ozone"])  ## A vector of TRUE/FALSE
+sum(miss)
+## 42.13
+mean(dataset[, "Ozone"], na.rm = TRUE)
+##
+subset(dataset, Ozone > 31 & Temp > 90)
+```
+
+
+
+
+---
+
+## R Self Warm-up Quiz (level 3)
+
+- Use a for loop to create a vector of length 6 containing the mean of each
+column in the data frame (excluding all missing values).
+- Use the apply function to calculate the standard deviation of each column
+in the data frame (excluding all missing values).
+
+
+
+
+```r
+##
+m <- numeric(6)
+for (i in 1:6) {
+    m[i] <- mean(dataset[, i], na.rm = TRUE)
+}
+##
+s <- apply(dataset, 2, sd, na.rm = TRUE)
+print(s)
+print(m)
+```
+
+
+
+
+---
+
+## R Self Warm-up Quiz (level 4)
+
+- Calculate the mean of "Ozone" for each Month in the data frame and
+create a vector containing the monthly means (exclude all missing values).
+
+
+
+
+```r
+tapply(dataset$Ozone, dataset$Month, mean, na.rm = TRUE)
+```
+
+```
+##     5     6     7     8     9 
+## 23.62 29.44 59.12 59.96 31.45 
+```
+
+
+
+
+> - Draw a random sample of 5 rows from the data frame.
+
+
+
+```r
+set.seed(1)  ## Just so the answer is repeatable
+dataset[sample(nrow(dataset), 5), ]
+```
+
+
+
+
+---
+
+
+

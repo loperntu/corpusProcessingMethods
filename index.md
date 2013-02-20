@@ -34,22 +34,14 @@ In general, Corpus data science involves a chain of works
 
 ---
 
-##
+## **Empirical method and statistics**
 
 ```
-**Empirical method and statistics** are two sides of the same coin: it is pointless to study one without the other. (You simply cannot design an experiment and interpret the results without understanding what the data are telling you and what
-they do not and–even more importantly – cannot tell you.)
+are two sides of the same coin: it is pointless to study one without the other. (You simply cannot design an experiment and interpret the results without understanding what the data are telling you and what they do not and–even more importantly – cannot tell you.)
 ```
 ---
 
-## 
 
-
-
-
-
-
----
 ## R Self Warm-up Quiz ( from R. Peng)
 
 - Download the dataset on http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv and load it into R with the read.csv function. Assign the output of read.csv to an object named dataset. 

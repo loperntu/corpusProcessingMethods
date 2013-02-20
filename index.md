@@ -2,7 +2,7 @@
 title       : Corpus Processing Methods II
 subtitle    : An R-chitecture Introduction
 author      : Shu-Kai Hsieh 謝舒凱
-job         : Assitant Prof. at GIL, NTU
+job         : GIL, National Taiwan University
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -15,15 +15,13 @@ github:
 
 ## Introduction: Data, Data, Data!
 
-1. English teacher or Data Scientist
+> 1. Decision is YOURS: English teacher or (Linguistic) Data Scientist
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
 
---- .class #id 
+--- 
 
-## Slide 1
-
-CPM, 到底有什麼特別?
+## CPM, 到底有什麼特別?
 
 > 1. Linguistics: a data-intensive discipline? 
 > 2. Corpus data science
@@ -38,7 +36,7 @@ CPM, 到底有什麼特別?
 ## Motion Chart
 
 <!-- MotionChart generated in R 2.15.1 by googleVis 0.2.17 package -->
-<!-- Wed Feb 20 10:47:02 2013 -->
+<!-- Wed Feb 20 10:51:47 2013 -->
 
 
 <!-- jsHeader -->
@@ -47,7 +45,7 @@ CPM, 到底有什麼特別?
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartID162a50a11f76 ()
+function gvisDataMotionChartID162a218a555 ()
 {
   var data = new google.visualization.DataTable();
   var datajson =
@@ -146,14 +144,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartID162a50a11f76() {
-  var data = gvisDataMotionChartID162a50a11f76();
+function drawChartMotionChartID162a218a555() {
+  var data = gvisDataMotionChartID162a218a555();
   var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
      var chart = new google.visualization.MotionChart(
-       document.getElementById('MotionChartID162a50a11f76')
+       document.getElementById('MotionChartID162a218a555')
      );
      chart.draw(data,options);
     
@@ -162,14 +160,14 @@ options["height"] =    500;
   
  
 // jsDisplayChart 
-function displayChartMotionChartID162a50a11f76()
+function displayChartMotionChartID162a218a555()
 {
   google.load("visualization", "1", { packages:["motionchart"] }); 
-  google.setOnLoadCallback(drawChartMotionChartID162a50a11f76);
+  google.setOnLoadCallback(drawChartMotionChartID162a218a555);
 }
  
 // jsChart 
-displayChartMotionChartID162a50a11f76()
+displayChartMotionChartID162a218a555()
  
 <!-- jsFooter -->  
 //-->
@@ -177,7 +175,7 @@ displayChartMotionChartID162a50a11f76()
  
 <!-- divChart -->
   
-<div id="MotionChartID162a50a11f76"
+<div id="MotionChartID162a218a555"
   style="width: 600px; height: 500px;">
 </div>
 

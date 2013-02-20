@@ -2,7 +2,7 @@
 title       : Corpus Processing Methods II
 subtitle    : An R-chitecture Introduction
 author      : Shu-Kai Hsieh 謝舒凱
-job         : Assitant Prof. at GIL, NTU
+job         : GIL, National Taiwan University
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -15,15 +15,13 @@ github:
 
 ## Introduction: Data, Data, Data!
 
-1. English teacher or Data Scientist
+> 1. Decision is YOURS: English teacher or (Linguistic) Data Scientist
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
 
---- .class #id 
+--- 
 
-## Slide 1
-
-CPM, 到底有什麼特別?
+## CPM, 到底有什麼特別?
 
 > 1. Linguistics: a data-intensive discipline? 
 > 2. Corpus data science

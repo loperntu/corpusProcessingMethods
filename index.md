@@ -19,7 +19,21 @@ github:
 > 2. Linguistics: a data-intensive discipline? 
 > 3. The Decision is YOURS: English teacher or (Linguistic) Data Scientist
 
+---
+
+## English Teacher
+
+
+![alt text](englishteacher.jpg)
+
 --- 
+
+## Data Scientist
+
+![alt text](datascientist.jpeg)
+
+---
+
 
 ## What's so special about CPM ? OR, What do you mean by *processing* data? 
 
@@ -30,15 +44,26 @@ In general, Corpus data science involves a chain of works
 > 3. Exploratory Data Analysis (with workable knowledge of Statistics)
 > 4. Hypothesis testing
 > 5. Prediction, Statistical Modeling, etc
-> 6. Web application (Demo: Shiny-LexicoR) 
+> 6. Presentation and Web application (Demo: Shiny-LexicoR) 
 
 ---
 
-## **Empirical method and statistics**
+## Empirical Method and Statistics
 
 ```
-are two sides of the same coin: it is pointless to study one without the other. (You simply cannot design an experiment and interpret the results without understanding what the data are telling you and what they do not and–even more importantly – cannot tell you.)
+.. are two sides of the same coin: it is pointless to study one without the other. 
+(You simply cannot design an experiment and interpret the results without 
+understanding what the data are telling you and what they do not 
+and – even more importantly – cannot tell you.)
+
 ```
+
+---
+
+## Why R/R-chitecture?
+
+![alt text](rchitecture.png)
+
 ---
 
 
@@ -46,8 +71,7 @@ are two sides of the same coin: it is pointless to study one without the other. 
 
 - Download the dataset on http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv and load it into R with the read.csv function. Assign the output of read.csv to an object named dataset. 
 
-> Possible solutions 
-
+> 
 
 
 
@@ -73,7 +97,10 @@ dataset <- read.csv("selfquiz-data.csv")
 - Extract the first 6 rows of the data frame and print them to the console.
 - How many observations (i.e. rows) are in this data frame?
 
-> Possible solutions 
+
+---
+
+## Possible solutions 
 
 
 
@@ -102,8 +129,9 @@ values (coded as NA) from this calculation.
 - Extract the subset of rows of the data frame where Ozone values are above
 31 and Temp values are above 90.
 
+---
 
-> Possible solutions 
+## Possible solutions 
 
 
 
@@ -131,6 +159,9 @@ column in the data frame (excluding all missing values).
 - Use the apply function to calculate the standard deviation of each column
 in the data frame (excluding all missing values).
 
+---
+
+## Possible solutions
 
 
 
@@ -155,7 +186,11 @@ print(m)
 
 - Calculate the mean of "Ozone" for each Month in the data frame and
 create a vector containing the monthly means (exclude all missing values).
+- Draw a random sample of 5 rows from the data frame.
 
+---
+
+## Possible solutions
 
 
 
@@ -168,16 +203,19 @@ tapply(dataset$Ozone, dataset$Month, mean, na.rm = TRUE)
 ## 23.62 29.44 59.12 59.96 31.45 
 ```
 
-
-
-
-> - Draw a random sample of 5 rows from the data frame.
-
-
-
 ```r
-set.seed(1)  ## Just so the answer is repeatable
+
+## set.seed(1) ## Just so the answer is repeatable
 dataset[sample(nrow(dataset), 5), ]
+```
+
+```
+##     Ozone Solar.R Wind Temp Month Day
+## 103    NA     137 11.5   86     8  11
+## 121   118     225  2.3   94     8  29
+## 17     34     307 12.0   66     5  17
+## 109    59      51  6.3   79     8  17
+## 62    135     269  4.1   84     7   1
 ```
 
 

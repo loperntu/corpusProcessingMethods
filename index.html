@@ -59,6 +59,28 @@
 
       <slide class="" id="slide-2" style="background:;">
   <hgroup>
+    <h2>English Teacher</h2>
+  </hgroup>
+  <article>
+    <p><img src="englishteacher.jpg" alt="alt text"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Data Scientist</h2>
+  </hgroup>
+  <article>
+    <p><img src="datascientist.jpeg" alt="alt text"></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
     <h2>What&#39;s so special about CPM ? OR, What do you mean by <em>processing</em> data?</h2>
   </hgroup>
   <article>
@@ -70,31 +92,50 @@
 <li>Exploratory Data Analysis (with workable knowledge of Statistics)</li>
 <li>Hypothesis testing</li>
 <li>Prediction, Statistical Modeling, etc</li>
-<li>Web application (Demo: Shiny-LexicoR) </li>
+<li>Presentation and Web application (Demo: Shiny-LexicoR) </li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-3" style="background:;">
+      <slide class="" id="slide-5" style="background:;">
   <hgroup>
-    <h2><strong>Empirical method and statistics</strong></h2>
+    <h2>Empirical Method and Statistics</h2>
   </hgroup>
   <article>
-    <pre><code>are two sides of the same coin: it is pointless to study one without the other. (You simply cannot design an experiment and interpret the results without understanding what the data are telling you and what they do not and–even more importantly – cannot tell you.)
+    <pre><code>.. are two sides of the same coin: it is pointless to study one without the other. 
+(You simply cannot design an experiment and interpret the results without 
+understanding what the data are telling you and what they do not 
+and – even more importantly – cannot tell you.)
+
 </code></pre>
 
-<hr>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<h2>R Self Warm-up Quiz ( from R. Peng)</h2>
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Why R/R-chitecture?</h2>
+  </hgroup>
+  <article>
+    <p><img src="rchitecture.png" alt="alt text"></p>
 
-<ul>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>R Self Warm-up Quiz ( from R. Peng)</h2>
+  </hgroup>
+  <article>
+    <ul>
 <li>Download the dataset on <a href="http://www.biostat.jhsph.edu/%7Erpeng/coursera/selfquiz/selfquiz-data.csv">http://www.biostat.jhsph.edu/~rpeng/coursera/selfquiz/selfquiz-data.csv</a> and load it into R with the read.csv function. Assign the output of read.csv to an object named dataset. </li>
 </ul>
 
 <blockquote>
-<p>Possible solutions </p>
 </blockquote>
 
 <pre><code class="r">## One way (easiest and fastest)
@@ -110,7 +151,7 @@ dataset &lt;- read.csv(&quot;selfquiz-data.csv&quot;)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-4" style="background:;">
+      <slide class="" id="slide-8" style="background:;">
   <hgroup>
     <h2>R Self Warm-up Quiz (level 1)</h2>
   </hgroup>
@@ -122,11 +163,16 @@ dataset &lt;- read.csv(&quot;selfquiz-data.csv&quot;)
 <li>How many observations (i.e. rows) are in this data frame?</li>
 </ul>
 
-<blockquote>
-<p>Possible solutions </p>
-</blockquote>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<pre><code class="r">##
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    <h2>Possible solutions</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">##
 names(dataset)  ## colnames(dataset) also works
 ##
 rownames(dataset)
@@ -140,7 +186,7 @@ nrow(dataset)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-5" style="background:;">
+      <slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>R Self Warm-up Quiz (level 2)</h2>
   </hgroup>
@@ -154,11 +200,16 @@ values (coded as NA) from this calculation.</li>
 31 and Temp values are above 90.</li>
 </ul>
 
-<blockquote>
-<p>Possible solutions </p>
-</blockquote>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<pre><code class="r">##
+      <slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Possible solutions</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">##
 tail(dataset)
 ## 37
 miss &lt;- is.na(dataset[, &quot;Ozone&quot;])  ## A vector of TRUE/FALSE
@@ -173,7 +224,7 @@ subset(dataset, Ozone &gt; 31 &amp; Temp &gt; 90)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-6" style="background:;">
+      <slide class="" id="slide-12" style="background:;">
   <hgroup>
     <h2>R Self Warm-up Quiz (level 3)</h2>
   </hgroup>
@@ -185,7 +236,16 @@ column in the data frame (excluding all missing values).</li>
 in the data frame (excluding all missing values).</li>
 </ul>
 
-<pre><code class="r">##
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-13" style="background:;">
+  <hgroup>
+    <h2>Possible solutions</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">##
 m &lt;- numeric(6)
 for (i in 1:6) {
     m[i] &lt;- mean(dataset[, i], na.rm = TRUE)
@@ -200,7 +260,7 @@ print(m)
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-7" style="background:;">
+      <slide class="" id="slide-14" style="background:;">
   <hgroup>
     <h2>R Self Warm-up Quiz (level 4)</h2>
   </hgroup>
@@ -208,28 +268,43 @@ print(m)
     <ul>
 <li>Calculate the mean of &quot;Ozone&quot; for each Month in the data frame and
 create a vector containing the monthly means (exclude all missing values).</li>
+<li>Draw a random sample of 5 rows from the data frame.</li>
 </ul>
 
-<pre><code class="r">tapply(dataset$Ozone, dataset$Month, mean, na.rm = TRUE)
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-15" style="background:;">
+  <hgroup>
+    <h2>Possible solutions</h2>
+  </hgroup>
+  <article>
+    <pre><code class="r">tapply(dataset$Ozone, dataset$Month, mean, na.rm = TRUE)
 </code></pre>
 
 <pre><code>##     5     6     7     8     9 
 ## 23.62 29.44 59.12 59.96 31.45 
 </code></pre>
 
-<ul class = "build">
-<li>Draw a random sample of 5 rows from the data frame.</li>
-</ul>
-
-<pre><code class="r">set.seed(1)  ## Just so the answer is repeatable
+<pre><code class="r">
+## set.seed(1) ## Just so the answer is repeatable
 dataset[sample(nrow(dataset), 5), ]
+</code></pre>
+
+<pre><code>##     Ozone Solar.R Wind Temp Month Day
+## 103    NA     137 11.5   86     8  11
+## 121   118     225  2.3   94     8  29
+## 17     34     307 12.0   66     5  17
+## 109    59      51  6.3   79     8  17
+## 62    135     269  4.1   84     7   1
 </code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-      <slide class="" id="slide-8" style="background:;">
+      <slide class="" id="slide-16" style="background:;">
   <hgroup>
     
   </hgroup>

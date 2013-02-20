@@ -1,6 +1,6 @@
 ---
-title       : Corpus Processing Methods
-subtitle    : An R-chitecture
+title       : Corpus Processing Methods II
+subtitle    : An R-chitecture Introduction
 author      : Shu-Kai Hsieh 謝舒凱
 job         : Assitant Prof. at GIL, NTU
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -13,9 +13,9 @@ github:
   repo: corpusProcessingMethods
 ---
 
-## Read-And-Delete
+## Introduction: Data, Data, Data!
 
-1. Edit YAML front matter
+1. English teacher or Data Scientist
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
 

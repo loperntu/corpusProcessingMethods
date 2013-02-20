@@ -1,6 +1,6 @@
 ---
-title       : Corpus Processing Methods
-subtitle    : An R-chitecture
+title       : Corpus Processing Methods II
+subtitle    : An R-chitecture Introduction
 author      : Shu-Kai Hsieh 謝舒凱
 job         : Assitant Prof. at GIL, NTU
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -13,9 +13,9 @@ github:
   repo: corpusProcessingMethods
 ---
 
-## Read-And-Delete
+## Introduction: Data, Data, Data!
 
-1. Edit YAML front matter
+1. English teacher or Data Scientist
 2. Write using R Markdown
 3. Use an empty line followed by three dashes to separate slides!
 
@@ -38,7 +38,7 @@ CPM, 到底有什麼特別?
 ## Motion Chart
 
 <!-- MotionChart generated in R 2.15.1 by googleVis 0.2.17 package -->
-<!-- Mon Feb 18 17:29:35 2013 -->
+<!-- Wed Feb 20 10:47:02 2013 -->
 
 
 <!-- jsHeader -->
@@ -47,7 +47,7 @@ CPM, 到底有什麼特別?
 <script type="text/javascript">
  
 // jsData 
-function gvisDataMotionChartIDea77ce696fb ()
+function gvisDataMotionChartID162a50a11f76 ()
 {
   var data = new google.visualization.DataTable();
   var datajson =
@@ -146,14 +146,14 @@ return(data);
 }
  
 // jsDrawChart
-function drawChartMotionChartIDea77ce696fb() {
-  var data = gvisDataMotionChartIDea77ce696fb();
+function drawChartMotionChartID162a50a11f76() {
+  var data = gvisDataMotionChartID162a50a11f76();
   var options = {};
 options["width"] =    600;
 options["height"] =    500;
 
      var chart = new google.visualization.MotionChart(
-       document.getElementById('MotionChartIDea77ce696fb')
+       document.getElementById('MotionChartID162a50a11f76')
      );
      chart.draw(data,options);
     
@@ -162,14 +162,14 @@ options["height"] =    500;
   
  
 // jsDisplayChart 
-function displayChartMotionChartIDea77ce696fb()
+function displayChartMotionChartID162a50a11f76()
 {
   google.load("visualization", "1", { packages:["motionchart"] }); 
-  google.setOnLoadCallback(drawChartMotionChartIDea77ce696fb);
+  google.setOnLoadCallback(drawChartMotionChartID162a50a11f76);
 }
  
 // jsChart 
-displayChartMotionChartIDea77ce696fb()
+displayChartMotionChartID162a50a11f76()
  
 <!-- jsFooter -->  
 //-->
@@ -177,7 +177,7 @@ displayChartMotionChartIDea77ce696fb()
  
 <!-- divChart -->
   
-<div id="MotionChartIDea77ce696fb"
+<div id="MotionChartID162a50a11f76"
   style="width: 600px; height: 500px;">
 </div>
 
